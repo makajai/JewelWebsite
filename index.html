@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            margin-top: 200px;
+            margin-bottom: 5000px;
+            margin-right: 500px;
+            margin-left: 400px;
+            background-color: lightblue;
+
+            clear: both;
+        }
+
+        .container input {
+            width: 95%;
+            margin-left: 10px;
+            clear: both;
+        }
+
+        .container1 input {
+            width: 50%
+        } 
+    </style>
+    <script type="text/javascript">
+        function validateCode(){
+            var temp = document.getElementById("code");
+            if (temp.value === "hi" ){
+                return true;
+            }
+            else{
+                alert("Enter the valid code");
+                return false;
+            }
+            
+        }
+    </script>
+</head>
+
+<body background="bgimg.jpg">
+    <div class="container">
+        <form name="myForm" action="/page1.html" onsubmit="return validateCode()">
+            Enter the code in the below text box and Press Submit <br>
+            <input type="text" id="code" name="code" placeholder="Enter the code">
+            <br><br>
+            <input class= "container1" type="submit" value="Submit">
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
